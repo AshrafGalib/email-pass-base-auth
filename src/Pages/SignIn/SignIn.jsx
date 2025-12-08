@@ -1,0 +1,28 @@
+import React from 'react';
+
+const SignIn = () => {
+    const handleSignInButton=(e)=>{
+       e.preventDefault()
+      const email =e.target.email.value
+      const password = e.target.password.value
+      console.log(email,password)
+    }
+    return (
+        <div>
+             <div className="mt-10 card bg-base-100 w-full mx-auto max-w-sm shrink-0 shadow-2xl">
+            <div className="card-body">
+                <form onSubmit={handleSignInButton}  className="fieldset">
+                    <label className="label">Email</label>
+                    <input type="email" className="input" name='email' placeholder="Email" />
+                    <label className="label" >Password</label>
+                    <input type="password" name="password" className="input" placeholder="Password" />
+                    <div><a className="link link-hover">Forgot password?</a></div>
+                    <input className='btn btn-neutral' type="submit" value="Login" />
+                </form>
+            </div>
+        </div>
+        </div>
+    );
+};
+
+export default SignIn;
