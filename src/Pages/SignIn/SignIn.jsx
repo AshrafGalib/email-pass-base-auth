@@ -48,7 +48,7 @@ const [successMessage,setSuccessMessage]= useState(false)
     const handleForgetPass=()=>{
      const mail = emailRef.current.value
   
-     //reset email
+     //reset pass
      sendPasswordResetEmail(auth, mail)
   .then(() => {
     alert('A password reset link has been sent to your email. Check your inbox or spam folder.')
